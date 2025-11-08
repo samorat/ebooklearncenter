@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อเรา - Local Learn Center</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="https://www.locallearncenter.com/home.html">Local Learn Center</a></h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <div class="contact-intro">
+                <h2>ติดต่อเรา</h2>
+                <p>เรายินดีรับฟังความคิดเห็นของคุณ! ไม่ว่าจะเป็นคำถาม ข้อเสนอแนะ หรือแจ้งปัญหาการใช้งานระบบ
+                    กรุณากรอกฟอร์มด้านล่าง หรือติดต่อเราผ่านช่องทางที่คุณสะดวกได้เลยครับ</p>
+            </div>
+
+            <div class="contact-layout">
+                
+                <div class="contact-form-container">
+                    <h3>ส่งข้อความถึงเราทางอีเมล</h3>
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">ชื่อ-นามสกุล *</label>
+                            <input type="text" id="name" name="name">
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="email">อีเมล *</label>
+                            <input type="email" id="email" name="email">
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">หัวข้อเรื่อง *</label>
+                            <input type="text" id="subject" name="subject">
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="phone">เบอร์โทรศัพท์</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">ที่อยู่(ไม่จำเป็น)</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="message">ข้อความ เรื่องที่ต้องการติดต่อ *</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+            
+                        <div class="form-footer">
+                            <button type="submit" id="submitButton">ส่งข้อความ</button>
+                            <div id="formStatus"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-info-container">
+                    <h3>ช่องทางติดต่อ (เรื่องด่วน) </h3>
+                    <p>คุณสามารถติดต่อเราได้โดยตรงผ่าน:</p>
+                    <ul class="contact-details">
+                        <li>
+                            <strong>📧 อีเมล:</strong>
+                            <a href="mailto:samorat999@gmail.com">samorat999@gmail.com</a> 
+                            </li>
+                        <li>
+                            <strong>📞 โทรศัพท์:</strong>
+                            <a href="tel:+6633435179">063-343-5179</a>
+                            </li>
+                        <li>
+                            <strong>📍 ไลน์ผู้ดูแลระบบ:</strong>
+                            <a href="http://line.me/ti/p/~0633435179">ID : 0633435179</a> 
+                            </li>
+                    </ul>
+                    <p><strong>เวลาทำการ:</strong><br>
+                        จันทร์ - ศุกร์, 9:00 - 16:30 น.</p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Local Learn Center. สงวนลิขสิทธิ์.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+/* --- 1. การตั้งค่าพื้นฐานและฟอนต์ --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ Kanit */
+    background-color: #f8f9fa; /* สีพื้นหลังเทาอ่อน */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- 2. ส่วน Header --- */
+.site-header {
+    background-color: #ffffff;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.site-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.site-header h1 a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* --- 3. ส่วน Main Content --- */
+main {
+    flex: 1; /* ทำให้ main ขยายเต็มพื้นที่ที่เหลือ */
+    padding: 3rem 0;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.contact-intro h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #007bff; /* สีหลัก */
+}
+
+.contact-intro p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- 4. Layout แบบ 2-Column --- */
+.contact-layout {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+/* 4.1. กล่องฟอร์ม */
+.contact-form-container {
+    flex: 2; /* ให้ฟอร์มกว้าง 2 ส่วน */
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* 4.2. กล่องข้อมูลติดต่อ */
+.contact-info-container {
+    flex: 1; /* ให้ข้อมูลกว้าง 1 ส่วน */
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    position: sticky; /* ทำให้กล่องนี้ "ลอย" ตามเมื่อเลื่อนหน้าจอ */
+    top: 2rem; 
+}
+
+.contact-form-container h3,
+.contact-info-container h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.contact-info-container p {
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details li {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    color: #555;
+}
+
+.contact-details li strong {
+    color: #333;
+    display: block; /* ให้ตัวหนาขึ้นบรรทัดใหม่ (หรือลบออกถ้าอยากให้อยู่บรรทัดเดียว) */
+}
+
+.contact-details li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-details li a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- 5. สไตล์ฟอร์ม (อัปเกรด) --- */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600; /* ตัวหนาเล็กน้อย */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Kanit', sans-serif; /* ทำให้ฟอนต์ในช่องกรอกเหมือนกัน */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* เอฟเฟกต์ตอนกดคลิก (Focus) */
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15); /* แสงเรืองๆ รอบช่อง */
+    outline: none; /* ลบเส้นกรอบสีดำของเบราว์เซอร์ */
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Kanit', sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* ปุ่มขยับขึ้นเล็กน้อย */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- 6. สไตล์ Error และ Status (เหมือนเดิม แต่ปรับสี) --- */
+.error-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+    border-color: #dc3545;
+}
+
+#formStatus {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.status-success { color: #155724; }
+.status-error { color: #dc3545; }
+
+/* --- 7. ส่วน Footer --- */
+.site-footer {
+    background-color: #343a40; /* สีเทาเข้ม */
+    color: #f8f9fa;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- 8. Responsive (สำหรับมือถือ) --- */
+@media (max-width: 768px) {
+    .contact-layout {
+        flex-direction: column; /* เปลี่ยนจากแนวนอนเป็นแนวตั้ง */
+        gap: 2rem;
+    }
+
+    .contact-info-container {
+        position: static; /* ยกเลิกการลอยตาม */
+        order: -1; /* สลับให้ข้อมูลติดต่อขึ้นก่อนฟอร์ม (optional) */
+    }
+
+    .contact-intro h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form-container,
+    .contact-info-container {
+        padding: 1.5rem;
+    }
+}
